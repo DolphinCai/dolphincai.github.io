@@ -50,16 +50,16 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsl(45, 100%, 72%), /* Backgroud color 45, 100%, 72%*/
+    hsl(35, 100%, 68%) /* Backgroud color */
   );
 
   /* solid */
 
   --jet: hsl(224, 41%, 79%);
-  --onyx: hsl(154, 59%, 38%);
-  --eerie-black-1: hsl(240, 61%, 35%);
-  --eerie-black-2: hsl(307, 74%, 46%);
+  --onyx: hsl(205, 38%, 70%); /* First page paragraph color */
+  --eerie-black-1: hsl(205, 90%, 40%);/* Icon color */
+  --eerie-black-2: hsl(202, 74%, 50%);/* Backgroud color /
   --smoky-black: hsl(0, 0%, 100%);
   /* --smoky-black: hsl(0, 0%, 7%); */
   --white-1: hsl(0, 0%, 7%);
