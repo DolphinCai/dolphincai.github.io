@@ -30,12 +30,12 @@
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    hsla(210, 51%, 58%, 0.251) 0%, 
+    hsla(210, 54%, 51%, 0) 100%
+  ), hsl(210, 53%, 53%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
+    hsl(216, 89%, 65%) 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
@@ -48,15 +48,22 @@
     hsl(0, 0%, 25%) 0%, 
     hsla(0, 0%, 25%, 0) 50%
   );
-  --text-gradient-yellow: linear-gradient(
+  --text-gradient-yellow: linear-gradient( /* color of resume bullet point */
     to right, 
+<<<<<<< Updated upstream
     hsl(45, 100%, 72%), /* Backgroud color 45, 100%, 72%*/
     hsl(35, 100%, 68%) /* Backgroud color 35, 100%, 68%*/
+=======
+    hsl(242, 70%, 61%), 
+    hsl(232, 70%, 57%)
+>>>>>>> Stashed changes
   );
 
   /* solid */
+  /* --background-color:hsl(200, 77%, 54%); */
 
   --jet: hsl(224, 41%, 79%);
+<<<<<<< Updated upstream
   --onyx: hsl(205, 38%, 70%); /* First page paragraph color */
   --eerie-black-1: hsl(205, 90%, 40%);/* Icon color */
   --eerie-black-2: hsl(204, 58%, 69%);/* Backgroud color /
@@ -64,13 +71,24 @@
   /* --smoky-black: hsl(0, 0%, 7%); */
   --white-1: hsl(0, 0%, 7%);
   --white-2: hsl(0, 0%, 7%);
+=======
+  --onyx: hsl(208, 71%, 81%);
+  --background-color: hsl(200, 77%, 54%);
+  /* hsl(200, 77%, 54%) */
+  --eerie-black-2: hsl(203, 70%, 75%);
+  --pure-white: hsl(0, 0%, 100%);
+  /* --pure-white: hsl(0, 0%, 7%); */
+  --white-1: hsl(270, 7%, 6%); /* TAMU & major*/
+  /* --resume-title: hsla(0, 0%, 100%); NAME */
+  --resume-title:hsl(270, 7%, 6%); /* NAME */
+>>>>>>> Stashed changes
   /* 
   -white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%); */
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --resume-title: hsl(0, 0%, 98%); */
+  --orange-yellow-crayola: rgba(151, 223, 238, 0.8); /* "show content" */
+  --vegas-gold: hsl(242, 70%, 61%);  /* Color for Date on resume*/
+  --light-gray: hsl(0, 100%, 100%);
+  --light-gray-70: hsla(0, 0%, 100%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -133,7 +151,7 @@ a { text-decoration: none; }
 
 li { list-style: none; }
 
-img, ion-icon, a, button, time, span { display: block; }
+img, ion-icon, button, time, span { display: block; }
 
 button {
   font: inherit;
@@ -152,14 +170,14 @@ input, textarea {
 
 ::selection {
   background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+  color: var(--pure-white);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { background: var(--pure-white); }
 
 
 
@@ -205,7 +223,7 @@ article {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--eerie-black-1);
+  background: var(--background-color);
   border-radius: inherit;
   z-index: -1;
 }
@@ -228,7 +246,7 @@ article.active {
 .h3,
 .h4,
 .h5 {
-  color: var(--white-2);
+  color: var(--resume-title);
   text-transform: capitalize;
 }
 
@@ -259,10 +277,11 @@ article.active {
   border-radius: 3px;
 }
 
+/*-----------------------------------*\
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
-}
+  width: 5px;  for vertical scrollbar
+  height: 5px; for horizontal scrollbar 
+} 
 
 .has-scrollbar::-webkit-scrollbar-track {
   background: var(--onyx);
@@ -274,7 +293,9 @@ article.active {
   border-radius: 5px;
 }
 
+
 .has-scrollbar::-webkit-scrollbar-button { width: 20px; }
+\*-----------------------------------*/
 
 .content-card {
   position: relative;
@@ -341,7 +362,7 @@ main {
 }
 
 .info-content .name {
-  color: var(--white-2);
+  color: var(--resume-title);
   font-size: var(--fs-3);
   font-weight: var(--fw-500);
   letter-spacing: -0.25px;
@@ -351,7 +372,7 @@ main {
 .info-content .title {
   color: var(--white-1);
   background: var(--onyx);
-  font-size: var(--fs-8);
+  font-size: var(--fs-6);
   font-weight: var(--fw-300);
   width: max-content;
   padding: 3px 12px;
@@ -420,14 +441,14 @@ main {
 }
 
 .contact-title {
-  color: var(--light-gray-70);
-  font-size: var(--fs-8);
+  color: var(--pure-white);
+  font-size: var(--fs-7);
   text-transform: uppercase;
   margin-bottom: 2px;
 }
 
 .contact-info :is(.contact-link, time, address) {
-  color: var(--white-2);
+  color: var(--resume-title);
   font-size: var(--fs-7);
 }
 
@@ -529,7 +550,7 @@ main {
 
 .service-item {
   position: relative;
-  background: var(--border-gradient-onyx);
+  /* background: var(--border-gradient-onyx); */
   padding: 20px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
@@ -690,7 +711,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white-2);
+  color: var(--resume-title);
   font-size: 18px;
   opacity: 0.7;
 }
@@ -735,22 +756,23 @@ main {
 
 .clients-list {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  /* align-items: flex-start; */
+  flex-wrap: wrap;
   gap: 15px;
   margin: 0 -15px;
   padding: 25px;
   padding-bottom: 25px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
+  /* overflow-x: auto; */
+  /* scroll-behavior: smooth; */
+  /* overscroll-behavior-inline: contain; */
+  /* scroll-snap-type: inline mandatory; */
+  /* scroll-padding-inline: 25px; */
 }
 
 .clients-item {
-  min-width: 50%;
-  scroll-snap-align: start;
+  min-width: 100%;
+  /* scroll-snap-align: start; */
 }
 
 .clients-item img {
@@ -832,6 +854,13 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  /* list-style-type: circle; */
+  /* display: list-item; */
+}
+
+.content-resume{
+  list-style-type: disc;
+  display: list-item;
 }
 
 
@@ -1018,7 +1047,7 @@ main {
 .project-category { margin-left: 10px; }
 
 .project-title {
-  color: var(--white-2);
+  color: var(--resume-title);
   font-size: var(--fs-5);
   font-weight: var(--fw-400);
   text-transform: capitalize;
@@ -1061,7 +1090,7 @@ main {
   position: absolute;
   inset: 1px;
   border-radius: inherit;
-  background: var(--eerie-black-1);
+  background: var(--background-color);
   z-index: -1;
 }
 
@@ -1127,7 +1156,7 @@ main {
   #CONTACT
 \*-----------------------------------*/
 
-.mapbox {
+.videobox {
   position: relative;
   height: 250px;
   width: 100%;
@@ -1137,9 +1166,9 @@ main {
   overflow: hidden;
 }
 
-.mapbox figure { height: 100%; }
+.videobox figure { height: 100%; }
 
-.mapbox iframe {
+.videobox iframe {
   width: 100%;
   height: 100%;
   border: none;
@@ -1158,7 +1187,7 @@ main {
 }
 
 .form-input {
-  color: var(--white-2);
+  color: var(--resume-title);
   font-size: var(--fs-6);
   font-weight: var(--fw-400);
   padding: 13px 20px;
@@ -1574,7 +1603,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar, article { width: 700px; }
 
-  .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
+  /* .has-scrollbar::-webkit-scrollbar-button { width: 100px; } */
 
 
 
@@ -1789,10 +1818,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar { width: 20px; }
 
-  body::-webkit-scrollbar-track { background: var(--smoky-black); }
+  body::-webkit-scrollbar-track { background: var(--pure-white); }
 
   body::-webkit-scrollbar-thumb {
-    border: 5px solid var(--smoky-black);
+    border: 5px solid var(--pure-white);
     background: hsla(0, 0%, 100%, 0.1);
     border-radius: 20px;
     box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
