@@ -50,28 +50,14 @@
   );
   --text-gradient-yellow: linear-gradient( /* color of resume bullet point */
     to right, 
-<<<<<<< Updated upstream
-    hsl(45, 100%, 72%), /* Backgroud color 45, 100%, 72%*/
-    hsl(35, 100%, 68%) /* Backgroud color 35, 100%, 68%*/
-=======
     hsl(242, 70%, 61%), 
     hsl(232, 70%, 57%)
->>>>>>> Stashed changes
   );
 
   /* solid */
   /* --background-color:hsl(200, 77%, 54%); */
 
   --jet: hsl(224, 41%, 79%);
-<<<<<<< Updated upstream
-  --onyx: hsl(205, 38%, 70%); /* First page paragraph color */
-  --eerie-black-1: hsl(205, 90%, 40%);/* Icon color */
-  --eerie-black-2: hsl(204, 58%, 69%);/* Backgroud color /
-  --smoky-black: hsl(0, 0%, 100%);
-  /* --smoky-black: hsl(0, 0%, 7%); */
-  --white-1: hsl(0, 0%, 7%);
-  --white-2: hsl(0, 0%, 7%);
-=======
   --onyx: hsl(208, 71%, 81%);
   --background-color: hsl(200, 77%, 54%);
   /* hsl(200, 77%, 54%) */
@@ -81,7 +67,6 @@
   --white-1: hsl(270, 7%, 6%); /* TAMU & major*/
   /* --resume-title: hsla(0, 0%, 100%); NAME */
   --resume-title:hsl(270, 7%, 6%); /* NAME */
->>>>>>> Stashed changes
   /* 
   -white-1: hsl(0, 0%, 100%);
   --resume-title: hsl(0, 0%, 98%); */
