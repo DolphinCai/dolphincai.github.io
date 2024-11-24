@@ -157,3 +157,91 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+// Add this code where you handle the filter buttons
+
+const filterButtons = document.querySelectorAll("[data-filter-btn]");
+const filterableItems = document.querySelectorAll("[data-filter-item]");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    // Remove active class from all buttons
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    // Add active class to clicked button
+    this.classList.add("active");
+    
+    const filterValue = this.textContent.toLowerCase().trim();
+    
+    filterableItems.forEach(item => {
+      const itemCategory = item.dataset.category.toLowerCase();
+      
+      if (filterValue === "all" || itemCategory === filterValue) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  });
+});
+
+// Image enlargement functionality
+const projectImages = document.querySelectorAll('.project-img');
+const body = document.body;
+
+projectImages.forEach(figure => {
+  figure.addEventListener('click', function(e) {
+    // Get the parent <a> tag's href
+    const parentLink = this.closest('a');
+    if (parentLink && parentLink.href.includes('ALUAS.html')) {
+      // If it's the ALUAS project, let the normal link navigation happen
+      return;
+    }
+    
+    // For other projects, do the image enlargement
+    e.preventDefault();
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    
+    const modalImg = document.createElement('img');
+    modalImg.src = this.querySelector('img').src;
+    
+    const closeBtn = document.createElement('span');
+    closeBtn.className = 'modal-close';
+    closeBtn.innerHTML = '&times;';
+    
+    modal.appendChild(closeBtn);
+    modal.appendChild(modalImg);
+    body.appendChild(modal);
+    
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal || e.target === closeBtn) {
+        modal.remove();
+      }
+    });
+  });
+});
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll('.carousel-item');
+  if (index >= slides.length) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide = index;
+  }
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === currentSlide);
+  });
+}
+
+function moveSlide(step) {
+  showSlide(currentSlide + step);
+}
+
+// Initialize the first slide
+showSlide(currentSlide);
